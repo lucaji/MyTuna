@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LJHelpablePopoverViewController">
+            <connections>
+                <outlet property="executeButton" destination="EQ1-eL-xMc" id="LRx-Op-pg8"/>
+                <outlet property="longdescriptionTextView" destination="aGg-zx-zYB" id="GSP-rI-PJg"/>
+                <outlet property="titleLabel" destination="PHG-4z-HP8" id="fRv-WJ-gw8"/>
+                <outlet property="turnOffHelpModeButton" destination="Ebq-IT-6Le" id="I0i-lV-geq"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="245" height="260"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textView opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" keyboardDismissMode="onDrag" editable="NO" text="description" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="aGg-zx-zYB">
+                    <rect key="frame" x="16" y="46" width="213" height="133"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                    <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                </textView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0mS-Vf-Rqk">
+                    <rect key="frame" x="0.0" y="228" width="245" height="32"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="eOx-XZ-5iG">
+                            <rect key="frame" x="8" y="0.0" width="229" height="32"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ebq-IT-6Le">
+                                    <rect key="frame" x="0.0" y="0.0" width="229" height="32"/>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <inset key="titleEdgeInsets" minX="4" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <state key="normal" title="Turn Help Mode Off" image="icon-help"/>
+                                    <connections>
+                                        <action selector="turnoffHelpModeButtonAction:" destination="-1" eventType="touchUpInside" id="ycy-uQ-vFB"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="eOx-XZ-5iG" secondAttribute="trailing" constant="8" id="3bK-W2-qcF"/>
+                        <constraint firstItem="eOx-XZ-5iG" firstAttribute="leading" secondItem="0mS-Vf-Rqk" secondAttribute="leading" constant="8" id="7Za-ew-OIk"/>
+                        <constraint firstAttribute="bottom" secondItem="eOx-XZ-5iG" secondAttribute="bottom" id="DTZ-IH-GMg"/>
+                        <constraint firstItem="eOx-XZ-5iG" firstAttribute="top" secondItem="0mS-Vf-Rqk" secondAttribute="top" id="Ix4-Yr-5MV"/>
+                        <constraint firstAttribute="height" constant="32" id="VVb-hB-693"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="PHG-4z-HP8">
+                    <rect key="frame" x="16" y="8" width="213" height="38"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="38" id="raz-w1-Sul"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EQ1-eL-xMc">
+                    <rect key="frame" x="193" y="187" width="44" height="33"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                    <color key="tintColor" red="1" green="0.11609800169999999" blue="0.17551551870000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" title="Do it!">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="executeButtonAction:" destination="-1" eventType="touchUpInside" id="fB4-Gl-NFo"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.3206048044217687" green="0.097542226314544678" blue="0.10609935224056244" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="aGg-zx-zYB" firstAttribute="top" secondItem="PHG-4z-HP8" secondAttribute="bottom" id="AAL-oM-b9e"/>
+                <constraint firstItem="aGg-zx-zYB" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="ALH-E9-RGZ"/>
+                <constraint firstAttribute="trailing" secondItem="aGg-zx-zYB" secondAttribute="trailing" constant="16" id="E2e-G7-FYg"/>
+                <constraint firstAttribute="trailing" secondItem="0mS-Vf-Rqk" secondAttribute="trailing" id="EJv-BO-AEl"/>
+                <constraint firstAttribute="trailing" secondItem="EQ1-eL-xMc" secondAttribute="trailing" constant="8" id="Tsi-GG-vSc"/>
+                <constraint firstItem="0mS-Vf-Rqk" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="bLW-e1-7yl"/>
+                <constraint firstItem="PHG-4z-HP8" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="8" id="cIf-hR-BGC"/>
+                <constraint firstItem="0mS-Vf-Rqk" firstAttribute="top" secondItem="EQ1-eL-xMc" secondAttribute="bottom" constant="8" id="dvS-mA-m2k"/>
+                <constraint firstItem="EQ1-eL-xMc" firstAttribute="top" secondItem="aGg-zx-zYB" secondAttribute="bottom" constant="8" id="mja-8q-4at"/>
+                <constraint firstItem="PHG-4z-HP8" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="oVk-Vg-0cz"/>
+                <constraint firstAttribute="bottom" secondItem="0mS-Vf-Rqk" secondAttribute="bottom" id="pha-tu-A3l"/>
+                <constraint firstAttribute="trailing" secondItem="PHG-4z-HP8" secondAttribute="trailing" constant="16" id="qeT-Jg-ya1"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-45.5" y="-156"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon-help" width="29" height="29"/>
+    </resources>
+</document>

@@ -1,0 +1,16 @@
+//
+//  UTHelpBarButtonItem.h
+//  StartRec12
+//
+//  Created by Luca Cipressi on 08/09/2017.
+//  Copyright (c) 2017 Luca Cipressi - lucaji.github.io - lucaji@mail.ru. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+#import "LJHelpableBarButtonItem.h"
+
+@interface LJHelpSwitcherBarButton : LJHelpableBarButtonItem
+
+@property (nonatomic) IBOutlet UIViewController<UIPopoverPresentationControllerDelegate>*presenterVC;
+
+@end
